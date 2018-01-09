@@ -20,5 +20,6 @@ Naah, it doesn't have tests (yet) :broken_heart:
 
 ## Available routes
 
-`GET /test` - Simply returns a JSON with a token to test it on the next route!
-`GET /authorized/test` - Here you can actually see how the authorization mechanism is working!! :smiley:
+* `GET /test` - Simply returns a JSON with a token to test it on the next route!
+
+* `GET /authorized/test` - Here you can actually see how the authorization mechanism is working!! :smiley:
