@@ -18,8 +18,8 @@ module.exports = app => {
   app.get('/authorized/test', (req, res) => {
 
     res.json({
-      payload: authService.decodeToken(req.headers.Authorization),
-      isTokenValid: authService.isTokenValid(req.headers.Authorization)
+      payload: authService.decodeToken(req.headers.authorization),
+      isTokenValid: authService.isTokenValid(req.headers.authorization)
     })
 
   })

@@ -8,6 +8,6 @@ module.exports = app => {
 
   authService.secret = app.get('secret')
   authService.expiryTime = app.get('expiryTime')
-  authService.expiryFactor = app.get('expiryFactory')
+  authService.expiryFactor = app.get('expiryFactor')
 
 }

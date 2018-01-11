@@ -12,15 +12,18 @@ const generateError = (res, status) => {
 const authmiddleware = (req, res, next) => {
   const header = req.headers.authorization
 
-  console.log('headerssssssssss', header)
-
   if (!header) {
     return generateError(res, 401)
   }
 
-  const isValid = authService.isTokenValid(header)
+  try {
+    const isValid = authService.isTokenValid(header)
 
-  if (!isValid) {
+    if (!isValid) {
+      return generateError(res, 403)
+    }
+  } catch (ex) {
+    console.error(`Error while trying to decode the token`)
     return generateError(res, 403)
   }
 
