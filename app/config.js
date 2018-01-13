@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser'
+import path from 'path'
 
 module.exports = app => {
   app.set('port', process.env.PORT || 3030)
@@ -12,4 +13,8 @@ module.exports = app => {
   app.set('secret', process.env.AUTH_SECRET || 'CHANGE_ME')
   app.set('expiryTime', process.env.TOKEN_EXPT || '24')
   app.set('expiryFactor', process.env.TOKEN_EXPF || 'hours')
+
+  // logging system stuff!
+  app.set('loggerDirectory', process.env.LOGGING_DIR || path.join(__dirname, 'log'))
+  app.set('logName', process.env.APP_NAME || 'express-boilerplate')
 }
