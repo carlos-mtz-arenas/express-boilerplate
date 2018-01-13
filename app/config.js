@@ -16,5 +16,6 @@ module.exports = app => {
 
   // logging system stuff!
   app.set('loggerDirectory', process.env.LOGGING_DIR || path.join(__dirname, 'log'))
+  app.set('logLevel', process.env.LOG_LEVEL || 'debug')
   app.set('logName', process.env.APP_NAME || 'express-boilerplate')
 }

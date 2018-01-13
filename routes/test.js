@@ -1,10 +1,16 @@
+import winston from 'winston'
 import { authService } from '../services/authservice'
+
+const LOG = winston
 
 module.exports = app => {
   app.get('/test', (req, res) => {
     const tstToken = {
       thisis: 'nice :D'
     }
+
+    LOG.info('this is an info message')
+    LOG.debug('this is a debug :V')
 
     const fakeToken =
       authService.encodeToken(tstToken)
