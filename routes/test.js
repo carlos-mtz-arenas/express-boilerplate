@@ -1,7 +1,4 @@
-import winston from 'winston'
-import { authService } from '../services/authservice'
-
-const LOG = winston
+import * as LOG from 'winston'
 
 module.exports = app => {
 
@@ -32,4 +29,5 @@ module.exports = app => {
     })
 
   })
+
 }

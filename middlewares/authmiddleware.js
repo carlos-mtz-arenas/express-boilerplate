@@ -1,5 +1,6 @@
 import authRequired from '../app/authroutes'
 
+
 let authService = null
 
 const generateError = (res, status) => {
@@ -42,4 +43,5 @@ module.exports = app => {
     // don't quite like to do this but.. Yeap.. eval :V
     eval(`app.${route.method}('${route.url}', authmiddleware)`)
   })
+
 }
