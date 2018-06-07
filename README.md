@@ -16,7 +16,9 @@ As the name indicates, this is a boilerplate for nodejs REST APIs construction, 
 
 ## Test it
 
-Naah, it doesn't have tests (yet) :broken_heart:
+We use mocha and chai for testing, under `test` folder, you can find one example of how to build the tests (since we use class based, it may not be straight forward)
+
+`npm run test`
 
 ## Available routes
 
